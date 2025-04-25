@@ -9,3 +9,6 @@ format:
 
 run:
 	@python3 app.py
+
+test:
+	@pytest $(shell find . -name "test_*.py" -not -path "./.venv/*") -v --disable-warnings --maxfail=1

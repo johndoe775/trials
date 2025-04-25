@@ -1,0 +1,9 @@
+langchain
+langchain-groq
+langchain_community
+langchain_experimental
+python-dotenv
+pylint
+pytest
+black
+serper
