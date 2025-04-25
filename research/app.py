@@ -9,7 +9,7 @@ from langchain.agents import AgentType
 load_dotenv()
 groq = os.environ.get("groq")
 serper_api_key = os.environ.get("serper")
-llm = ChatGroq(temperature=0, api_key=groq, model_name="qwen-qwq-32b")
+llm = ChatGroq(temperature=0, api_key=groq, model_name="meta-llama/llama-4-scout-17b-16e-instruct")
 
 search = GoogleSerperAPIWrapper(serper_api_key=serper_api_key)
 tools = [

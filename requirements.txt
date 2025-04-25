@@ -6,4 +6,4 @@ python-dotenv
 pylint
 pytest
 black
-serper
+tavily-python
