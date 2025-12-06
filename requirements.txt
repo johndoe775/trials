@@ -3,3 +3,4 @@ uvicorn
 youtube-transcript-api
 deep-translator
 pydantic
+mangum
