@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 # import your class
-from back_end.yt_transcript import YouTubeTranscriptTranslator
+from yt_transcript import YouTubeTranscriptTranslator
 
 app = FastAPI()
 
