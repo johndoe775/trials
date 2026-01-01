@@ -41,6 +41,12 @@ pip install -r requirements.txt
 ```
 *(Note: Ensure you have `fastapi`, `uvicorn`, `youtube-transcript-api`, `deep-translator`, `langchain-core`, and `llm-gemini` installed or listed in requirements)*
 
+**Environment Configuration:**
+Create a `.env` file in the `back_end` directory and add your Google Gemini API key:
+```env
+api_key=your_api_key_here
+```
+
 Run the FastAPI server:
 ```bash
 uvicorn main:app --reload
