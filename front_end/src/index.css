@@ -1,0 +1,215 @@
+/* Main App Layout */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #f0f0f0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Chat Pane (Left Side) */
+.chat-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: flex 0.3s ease;
+}
+
+.chat-pane.split {
+  flex: 0.6;
+  /* Take 60% width when summary is open */
+  border-right: 1px solid #ccc;
+}
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Summary Pane (Right Side) */
+.summary-pane {
+  flex: 0.4;
+  /* Take 40% width */
+  background: white;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-pane h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.summary-content p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+/* Chat window */
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Chat bubbles */
+.bubble {
+  max-width: 100%;
+  /* Use entire width */
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  white-space: pre-wrap;
+  /* Preserves newlines but wraps text */
+  word-wrap: break-word;
+  /* Ensure long words break */
+  text-align: justify;
+}
+
+/* user bubble */
+.bubble.user {
+  background: #0084ff;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+/* assistant bubble */
+.bubble.assistant {
+  background: #e5e5ea;
+  color: black;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+/* input area */
+.input-bar {
+  display: flex;
+  padding: 12px;
+  background: white;
+  border-top: 1px solid #ccc;
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.input-bar button {
+  padding: 10px 18px;
+  font-size: 15px;
+  background: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-bar button:hover {
+  background: #0d8f6e;
+}
+
+/* Language dropdown */
+.lang-select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.two-pane {
+  display: flex;
+  gap: 14px;
+}
+
+/* LEFT SIDE CHAT */
+.chat-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background: #0f172a;
+  border-radius: 10px;
+  color: white;
+}
+
+.input-bar {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 8px;
+}
+
+.lang-select {
+  padding: 6px;
+}
+
+/* RIGHT SIDE SUMMARY */
+.summary-pane {
+  flex: 0.6;
+  /* Adjust flex to be proportional or let App.js handle logic. Wait, earlier logical was 0.4. I'll stick to layout mostly but fix background. */
+  /* Using chat-window background */
+  background: #0f172a;
+  color: white;
+  /* Remove border radius if it creates gaps, but keep consistent */
+  border-radius: 10px;
+  /* Use same padding strategies or let internal chat-window handle it */
+  padding: 0;
+  /* Internal chat-window has padding */
+  overflow: hidden;
+  /* Handle scrolling inside the chat-window */
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-content {
+  margin-top: 10px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.close-btn {
+  background: #374151;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #4b5563;
+}
